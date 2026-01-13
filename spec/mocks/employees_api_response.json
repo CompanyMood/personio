@@ -78,7 +78,13 @@
         },
         "subcompany": {
           "label": "Subcompany",
-          "value": null
+          "value": {
+            "type": "Subcompany",
+            "attributes": {
+              "id": 72639,
+              "name": "ACME Corp"
+            }
+          }
         },
         "office": {
           "label": "Office",
