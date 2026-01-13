@@ -21,6 +21,8 @@ RSpec.describe EmployeeModel do
     expect(@model.department_id).to eq(67_898)
     expect(@model.team).to eq('Recruiting')
     expect(@model.team_id).to eq(12_345)
+    expect(@model.subcompany).to eq('ACME Corp')
+    expect(@model.subcompany_id).to eq(72_639)
     expect(@model.office).to eq('London Office')
   end
 
