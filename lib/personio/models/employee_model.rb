@@ -3,7 +3,7 @@ class EmployeeModel
   # Personio fields to set on the employee model
   FIELDS = %i[
     id first_name last_name email status position supervisor employment_type
-    department office
+    department team office
   ].freeze
 
   # @return [Integer] The personio id
@@ -24,6 +24,12 @@ class EmployeeModel
   attr_reader :supervisor
   # @return [String] The employees department name
   attr_reader :department
+  # @return [Integer] The employees department id
+  attr_reader :department_id
+  # @return [String] The employees team name
+  attr_reader :team
+  # @return [Integer] The employees team id
+  attr_reader :team_id
   # @return [String] The employees office name
   attr_reader :office
 
@@ -47,8 +53,19 @@ class EmployeeModel
   end
 
   def department=(value)
-    value = value['attributes']['name'] unless value.nil?
+    unless value.nil?
+      @department_id = value['attributes']['id']
+      value = value['attributes']['name']
+    end
     @department = value
+  end
+
+  def team=(value)
+    unless value.nil?
+      @team_id = value['attributes']['id']
+      value = value['attributes']['name']
+    end
+    @team = value
   end
 
   def office=(value)

@@ -18,6 +18,9 @@ RSpec.describe EmployeeModel do
     expect(@model.position).to eq('HR Manager')
     expect(@model.employment_type).to eq('internal')
     expect(@model.department).to eq('HR')
+    expect(@model.department_id).to eq(67_898)
+    expect(@model.team).to eq('Recruiting')
+    expect(@model.team_id).to eq(12_345)
     expect(@model.office).to eq('London Office')
   end
 
