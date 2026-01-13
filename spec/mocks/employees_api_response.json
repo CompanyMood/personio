@@ -100,6 +100,16 @@
             }
           }
         },
+        "team": {
+          "label": "Team",
+          "value": {
+            "type": "Team",
+            "attributes": {
+              "id": 12345,
+              "name": "Recruiting"
+            }
+          }
+        },
         "cost_centers": {
           "label": "Cost center",
           "value": []
